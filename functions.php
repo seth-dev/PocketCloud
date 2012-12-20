@@ -48,7 +48,7 @@ function getTimeDiff($start, $end) {
 				$diff = $diff % 3600;
 			if($minutes=intval((floor($diff/60))))
 				$diff = $diff % 60;
-			$diff = intval($diff);            
+			$diff = intval($diff);
 			return(array('days'=&gt;$days, 'hours'=&gt;$hours, 'minutes'=&gt;$minutes, 'seconds'=&gt;$diff));
 		} else {
 			trigger_error(&quot;Ending date/time is earlier than the start date/time&quot;, E_USER_WARNING);
