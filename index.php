@@ -1,5 +1,6 @@
 <?php
 /* Import Files */
+include 'cryptography.php';
 include 'functions.php';
 /* Coding goes below this line */
 
