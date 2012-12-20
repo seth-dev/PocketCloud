@@ -33,6 +33,10 @@ function Init()
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="viewport" content="user-scalable=no, width=device-width" />
 
+<!-- some scripts, shall we? -->
+
+<script src="jQuery.js"></script>
+
 <!-- Prevent Elastic Scrolling -->
 
 <script>
