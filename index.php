@@ -1,6 +1,11 @@
 <?php
 
+/* Constant Variables */
 
+$version="0.1"; // Define version for reference
+$isbeta="1"; // Define if the version is beta. For info only.
+
+/* Processing Part */
 
 
 ?>
