@@ -5,8 +5,10 @@
 $version="0.1"; // Define version for reference
 $isbeta="1"; // Define if the version is beta. For info only.
 
-/* Processing Part */
+/* Date and Time */
 
+$tz = date_default_timezone_get();
+$date = date('m/d/Y h:i:s a', time());
 
 ?>
 
