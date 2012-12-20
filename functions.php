@@ -36,7 +36,29 @@ function isWeekend($date) {
 	else
 		return FALSE;
 }
-
+function getTimeDiff($start, $end) {
+	$uts['start'] = strtotime($start);
+	$uts['end'] = strtotime($end);
+	if($uts['start'] !== -1 &amp;&amp; $uts['end'] !== -1) {
+		if($uts['end'] &gt;= $uts['start']) {
+			$diff = $uts['end'] - $uts['start'];
+			if($days=intval((floor($diff/86400))))
+				$diff = $diff % 86400;
+			if($hours=intval((floor($diff/3600))))
+				$diff = $diff % 3600;
+			if($minutes=intval((floor($diff/60))))
+				$diff = $diff % 60;
+			$diff = intval($diff);            
+			return(array('days'=&gt;$days, 'hours'=&gt;$hours, 'minutes'=&gt;$minutes, 'seconds'=&gt;$diff));
+		} else {
+			trigger_error(&quot;Ending date/time is earlier than the start date/time&quot;, E_USER_WARNING);
+		}
+	} else {
+		trigger_error(&quot;Invalid date/time data detected&quot;, E_USER_WARNING);
+	}
+	
+	return(FALSE);
+}
 
 /* General Functions */
 
