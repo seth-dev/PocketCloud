@@ -32,8 +32,20 @@ function Init()
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="viewport" content="user-scalable=no, width=device-width" />
+
+<!-- Prevent Elastic Scrolling -->
+
+<script>
+ function ScreenScroll(event) {
+  // Window moving is a no-no
+  event.preventDefault() ;
+ }
+</script>
+
+<!-- end elastic prvention script -->
+
 </head>
-<body>
+<body ontouchmove="ScreenScroll(event);" >
 
 
 
