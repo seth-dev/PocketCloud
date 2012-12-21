@@ -19,6 +19,8 @@ if ($usrq !== "false") {
 <meta name="viewport" content="user-scalable=no, width=device-width" />
 <!-- some scripts, shall we? -->
 <script src="jQuery.js"></script>
+<link rel="stylesheet" href="jquery.mobile.css">
+<script src="jquery.mobile.js"></script> <!-- jQuery Mobile -->
 <!-- Prevent Elastic Scrolling -->
 <script>
  function ScreenScroll(event) {
@@ -28,7 +30,7 @@ if ($usrq !== "false") {
 </script>
 <!-- end elastic prvention script -->
 <!-- Some CSSes -->
-<link rel="stylesheet" href="pocketcloud.main.css" />
+<link rel="stylesheet" href="pocketcloud.main.css">
 
 </head>
 <body ontouchmove="ScreenScroll(event);" >
