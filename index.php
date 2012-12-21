@@ -5,7 +5,9 @@ include 'functions.php';
 /* Coding goes below this line */
 
 $usrq=isiPad();
-
+if ($usrq !== "false") {
+  jsRedirect("not-tablet.html");
+}
 
 
 ?>
