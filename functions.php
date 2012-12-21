@@ -13,11 +13,16 @@ $date = date('m/d/Y h:i:s a', time()); // Date and time
 $requesturl="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $clientip=$_SERVER['REMOTE_ADDR'];
 $useragent=$_SERVER['HTTP_USER_AGENT'];
-$isiPad = (bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad');
+
 
 /* Functions */
 
 /* Date and time functions */
+
+function isiPad() {
+$userpad = (bool) strpos($_SERVER['HTTP_USER_AGENT'],'iPad'); // check if user-agent contains iPad
+return $userpad; // return bool value of validation
+}
 
 function isWeekday($date) {
 	$d = date('w', strtotime($date));
