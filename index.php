@@ -21,6 +21,9 @@ include 'functions.php';
  }
 </script>
 <!-- end elastic prvention script -->
+<!-- Some CSSes -->
+<link rel="stylesheet" href="pocketcloud.main.css" />
+
 </head>
 <body ontouchmove="ScreenScroll(event);" >
 
