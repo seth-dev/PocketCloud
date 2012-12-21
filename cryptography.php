@@ -40,5 +40,19 @@ function getRandomChar($str, $exclude_spaces = TRUE) {
 	return $random_char;
 }
 
+function secure_rand($length) {
+  if(function_exists('openssl_random_pseudo_bytes')) {
+    $rnd = openssl_random_pseudo_bytes($length, $strong);
+    if ($strong === TRUE)
+      return $rnd;
+  }
+  $sha =''; $rnd ='';
+  for ($i=0; $i<$length; $i++) {
+    $sha = hash('sha256',$sha.mt_rand());
+    $char = mt_rand(0,62);
+    $rnd .= chr(hexdec($sha[$char].$sha[$char+1]));
+  }
+  return $rnd;
+}
 
 ?>
