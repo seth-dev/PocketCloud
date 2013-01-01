@@ -21,6 +21,7 @@ if ($usrq !== "false") {
 <script src="jQuery.js"></script>
 <link rel="stylesheet" href="jquery.mobile.css">
 <script src="jquery.mobile.js"></script> <!-- jQuery Mobile -->
+<script src="desktop.js"></script> <!-- Desktop UI -->
 <!-- Prevent Elastic Scrolling -->
 <script>
  function ScreenScroll(event) {
